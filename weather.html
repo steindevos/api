@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="js/weather.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .bg-color-header {
+            background-color: orange;
+        }
+
+        .header-title {
+            text-transform: uppercase;
+            font-size: 5rem;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+        .section-weather-widget {
+            margin-top: 120px;
+        }
+        
+        #submit {
+            margin-top: 5px;
+        }
+        
+        #data {
+            margin-top: 10px;
+        }
+        
+        .forecast-city {
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-style: sans-serif;
+        }
+        
+        #forecast-img {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<header class="container-fluid">
+    <div class="row bg-color-header">
+        <div class="col-sm-12 text-center">
+            <h1 class="header-title">Weather forecast</h1>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section class="container-fluid">
+        <div class="row text-center section-weather-widget">
+
+            <form id="cityForm">
+                <input name="city" type="text" placeholder="city name"/>
+            </form>
+            <button class='btn btn-info' id="submit" onclick="submitCity()">Check</button>
+
+            <div id="data"></div>
+        </div>
+    </section>
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
