@@ -13,13 +13,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Acme');
+        @import url('https://fonts.googleapis.com/css?family=Acme|Poiret+One');
+
         header {
-            min-height: 50px;
+            min-height: 80px;
             background-color: black;
         }
 
         .section-movie-query {
-            background-color: red;
+            margin-top: 30px;
+            min-height: 80px;
+            background-color: black;
         }
 
         a {
@@ -27,28 +32,73 @@
             color: white;
         }
 
+        .section-movie-title {
+            text-transform: uppercase;
+            font-family: 'Acme', sans-serif;
+        }
+        
+        .section-vote-average {
+            
+        }
+        
+        #section-movie-score {
+            background-color: yellow; 
+            border: solid 2px black;
+            box-shadow: 5px 5px 10px grey;
+            margin-top: 20px;
+            font-family: 'Poiret One', cursive;
+            font-weight: 900;
+            padding-top: 5px;
+        }
+
         .section-movie-info {
-            background-color: blue;
-            color: white;
+            font-family: 'Poiret One', cursive;
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+
+
+        .section-img {
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <header class="container-fluid">
-
+    <header class="container-fluid centered">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12 section-movie-query text-center">
+                <form class="" id="movieForm">
+                    <input name="movie" type="text" placeholder="movie title" />
+                </form>
+                <button class="btn btn-hover btn-danger" id="submit" onclick="submitMovie()">Check</button>
+            </div>
+        </div>
     </header>
+
     <section class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 section-movie-query text-center">
-                <form id="movieForm">
-                    <input name="movie" type="text" />
-                </form>
-                <button id="submit" onclick="submitMovie()">Check</button>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-8" id="title"></div>
+                    <div id="section-movie-score" class="col-xs-4 text-center">
+                        <div class="row">
+                            <div id="vote"></div>
+                        </div>
+                        <div class="row">
+                            <div id="number-of-votes"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" id="overview">
+
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-12 section-movie-info">
-                <ul id="data"></ul>
-            </div>
+
+            <div class="col-sm-6 text-center" id="image"></div>
         </div>
 
     </section>
